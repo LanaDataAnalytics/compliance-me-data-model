@@ -18,7 +18,7 @@ This repository contains an end-to-end ELT pipeline engineered to ingest, clean,
 
 ## Repository Structure
 
-- 'stg-view.sql' : Staging view implementing SSOT fallback logic dimensions
-- 'dim_beneficiary.sql' : De-duplicated master entity records
-- 'dim_programme.sql' : Categorical programme hierarchy
-- 'fact_financial_execution.sql' : Fact table executing the risk-flagging engine
+- `stg-view.sql` : Staging view implementing SSOT fallback logic dimensions
+- `dim_beneficiary.sql` : De-duplicated master entity records
+- `dim_programme.sql` : Categorical programme hierarchy
+- `fact_financial_execution.sql` : Fact table executing the risk-flagging engine
