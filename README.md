@@ -17,12 +17,8 @@ This repository contains an end-to-end ELT pipeline engineered to ingest, clean,
 - **Risk Engine Modeling:** Engineered a proprietary high_risk_variance_flag within the SQL Fact layer (threshold: >€100k committed with <85% absorption). Offloading this logic to the warehouse optimizes BI performance and enforces a consistent compliance definition across all reporting layers.
 
 ## Repository Structure
-```text
-/sql_pipeline
-├── /staging
-│   └── v_stg_fts_typed.sql          # Staging view implementing SSOT fallback logic
-├── /dimensions
-│   ├── dim_beneficiary.sql          # De-duplicated master entity records
-│   └── dim_programme.sql            # Categorical programme hierarchy
-└── /facts
-    └── fact_financial_execution.sql # Fact table executing the risk-flagging engine
+
+v_stg_fts_typed.sql          # Staging view implementing SSOT fallback logic dimensions
+dim_beneficiary.sql          # De-duplicated master entity records
+dim_programme.sql            # Categorical programme hierarchy
+fact_financial_execution.sql # Fact table executing the risk-flagging engine
